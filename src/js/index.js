@@ -6,6 +6,7 @@ var width = 25;
 var startWidth;
 var startWeight;
 var startItal;
+var winHeight = window.innerHeight;
 
 
 $('.status-button')._.bind('click', function(e){
@@ -15,7 +16,7 @@ $('.status-button')._.bind('click', function(e){
 
 $$('.v-font')._.bind('touchstart', function(e){
   startX = e.touches[0].pageX;
-  startY = e.touches[0].pageY;
+  startY = winHeight - e.touches[0].pageY;
 
   var props = getProps(e.target);
   startWidth = parseInt(props.width);
@@ -34,9 +35,7 @@ $$('.v-font')._.bind('touchmove', function(e){
   e.preventDefault();
 
   var diffX = e.touches[0].pageX - startX;
-  var diffY = (e.touches[0].pageY - startY) * 3;
-  //diffX = _.clamp(diffX, 0, 175);
-  //diffY = _.clamp(diffY*3, 0, 800);
+  var diffY = (winHeight - e.touches[0].pageY - startY) * 3;
 
   weight = Math.round(_.clamp(startWeight + diffY, 100, 900));
   width = Math.round(_.clamp(startWidth + diffX, 0, 200));
