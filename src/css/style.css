@@ -19,13 +19,64 @@ html, body {
 body {
   color: #fff;
   font-family: 'LeagueMono';
+  font-size:  14px;
+}
+
+.section-one {
+	font-family: 'LeagueMono';
+}
+
+.section-two {
+	font-family: 'Inter';
+	color: #111;
+	background-color:  #fff;
+}
+
+.section-two .longform {
+	font-size: 1.2em;
+}
+
+.v-font {
+	transition: border-color 0.2s;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(255, 0, 0, 0);
+	border-radius: 5px;
+}
+
+.animate {
+	transition: all 0.25s;
 }
 
 .longform {
-	font-variation-settings: 'wght' 400;
+	font-variation-settings: 'wght' 400, 'wdth' 100, 'ital' 0;
+	font-size: 1em;
 }
 
 .headline {
-	font-variation-settings: 'wght' 900, 'ital' 45;
-	font-size: 3em;
+	font-variation-settings: 'wght' 100, 'wdth' 200, 'ital' 0;
+	font-size: 2.2em;
+}
+
+.touching {
+	border-color: rgba(255, 0, 0, 1);
+}
+
+.status-bar {
+	background-color: #fff;
+	padding:  10px 10px 0 10px;
+}
+
+.status-label {
+	font-variation-settings: 'wght' 600, 'wdth' 125, 'ital' 0;
+}
+
+.status-button {
+	font-variation-settings: 'wght' 600, 'wdth' 125, 'ital' 0;
+}
+
+.status {
+	color:  #111;
+	font-size: 10px;
+	line-height: 11px;
 }
